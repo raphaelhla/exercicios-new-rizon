@@ -21,11 +21,6 @@ function getNameById(id: number): string | undefined {
     return pessoa ? pessoa.name : undefined;
 }
 
-function deletePessoaById(id: number): void {
-    let novaLista = lista.filter(pessoa => pessoa.id !== id);
-    lista = novaLista;
-}
-
 function setBioById(id: number, newBio: string): void {
     const pessoa = getPessoaById(id);
     if(pessoa){
@@ -40,6 +35,13 @@ function setNameById(id: number, newName: string): void {
     }
 }
 
+// Implementação deletePessoaById com o Paradigma Funcional
+function deletePessoaById(id: number): void {
+    let novaLista = lista.filter(pessoa => pessoa.id !== id);
+    lista = novaLista;
+}
+
+// Implementação getPessoaById com o Paradigma Funcional
 function getPessoaById(id: number): Pessoa | undefined {
     const pessoa = lista.find(pessoa => pessoa.id === id);
     return pessoa ? pessoa : undefined;
