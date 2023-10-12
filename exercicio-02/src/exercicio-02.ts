@@ -26,6 +26,20 @@ function deletePessoaById(id: number): void {
     lista = novaLista;
 }
 
+function setBioById(id: number, newBio: string): void {
+    const pessoa = getPessoaById(id);
+    if(pessoa){
+        pessoa.bio = newBio;
+    }
+}
+
+function setNameById(id: number, newName: string): void {
+    const pessoa = getPessoaById(id);
+    if(pessoa){
+        pessoa.name = newName;
+    }
+}
+
 function getPessoaById(id: number): Pessoa | undefined {
     const pessoa = lista.find(pessoa => pessoa.id === id);
     return pessoa ? pessoa : undefined;
