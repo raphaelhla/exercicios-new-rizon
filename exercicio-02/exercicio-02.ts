@@ -16,6 +16,11 @@ function getBioById(id: number): string | undefined {
     return pessoa ? pessoa.bio : undefined;
 }
 
+function getNameById(id: number): string | undefined {
+    const pessoa = getPessoaById(id);
+    return pessoa ? pessoa.name : undefined;
+}
+
 function getPessoaById(id: number) : Pessoa | undefined {
     for(const pessoa of lista) {
         if (pessoa.id === id){
@@ -25,4 +30,3 @@ function getPessoaById(id: number) : Pessoa | undefined {
 
     return undefined;
 }
-
