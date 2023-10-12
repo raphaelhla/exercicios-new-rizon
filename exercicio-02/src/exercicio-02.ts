@@ -21,7 +21,12 @@ function getNameById(id: number): string | undefined {
     return pessoa ? pessoa.name : undefined;
 }
 
-function getPessoaById(id: number) : Pessoa | undefined {
+function deletePessoaById(id: number): void {
+    let novaLista = lista.filter(pessoa => pessoa.id !== id);
+    lista = novaLista;
+}
+
+function getPessoaById(id: number): Pessoa | undefined {
     const pessoa = lista.find(pessoa => pessoa.id === id);
     return pessoa ? pessoa : undefined;
 }
