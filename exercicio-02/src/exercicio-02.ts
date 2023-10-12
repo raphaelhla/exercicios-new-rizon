@@ -22,11 +22,6 @@ function getNameById(id: number): string | undefined {
 }
 
 function getPessoaById(id: number) : Pessoa | undefined {
-    for(const pessoa of lista) {
-        if (pessoa.id === id){
-            return pessoa;
-        }
-    }
-
-    return undefined;
+    const pessoa = lista.find(pessoa => pessoa.id === id);
+    return pessoa ? pessoa : undefined;
 }
