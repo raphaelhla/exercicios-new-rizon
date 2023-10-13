@@ -13,12 +13,12 @@ let lista: Pessoa[] = [
 
 function getBioById(id: number): string | undefined {
     const pessoa = getPessoaById(id);
-    return pessoa ? pessoa.bio : undefined;
+    return pessoa?.bio;
 }
 
 function getNameById(id: number): string | undefined {
     const pessoa = getPessoaById(id);
-    return pessoa ? pessoa.name : undefined;
+    return pessoa?.name;
 }
 
 function setBioById(id: number, newBio: string): void {
@@ -37,14 +37,11 @@ function setNameById(id: number, newName: string): void {
 
 // Implementação deletePessoaById com o Paradigma Imperativo
 function deletePessoaById(id: number): void {
-    let novaLista: Pessoa[] = [];
     for(let index = 0; index < lista.length; index++){
-        if(lista[index].id !== id){
-            novaLista.push(lista[index]);
+        if(lista[index].id === id){
+            lista.splice(index, 1);
         }
     }
-
-    lista = novaLista;
 }
 
 // Implementação getPessoaById com o Paradigma Imperativo
