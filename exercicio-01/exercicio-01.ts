@@ -1,6 +1,13 @@
+/**
+ * Função que conta o número de vogais em uma palavra.
+ * @param palavra - A palavra da qual as vogais serão contadas.
+ * @returns O número de vogais na palavra.
+ */
 function contaVogais(palavra: string): number {
-	const vogais: string[] = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+	const vogais: string[] = ["a", "e", "i", "o", "u", "á", "é", "í", "ó", "ú", "â", "ê", "î", "ô", "û", "à", "è", "ì", "ò", "ù", "ã", "ẽ", "ĩ", "õ", "ũ"];
 	let contador: number = 0;
+
+    palavra = palavra.toLowerCase();
 
 	for (const letra of palavra) {
 		if (vogais.indexOf(letra) != -1){
@@ -11,6 +18,9 @@ function contaVogais(palavra: string): number {
 	return contador;
 }
 
+/**
+ * Função que exibe o resultado da contagem de vogais em um campo específico do HTML.
+ */
 function exibirResultado(): void {
     const $inputPalavra = document.getElementById("input-palavra") as HTMLInputElement;
     const $totalVogaisB = document.getElementById("total-vogais-b") as HTMLSpanElement;
