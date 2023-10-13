@@ -11,38 +11,38 @@ let lista: Pessoa[] = [
 {"id" : 4, "name": "Nicolau Copérnico", "bio": "Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar."}
 ];
 
-function getBioById(id: number): string | undefined {
-    const pessoa = getPessoaById(id);
-    return pessoa ? pessoa.bio : undefined;
+function getBioById(id: number, lista: Pessoa[]): string | undefined {
+    const pessoa = getPessoaById(id, lista);
+    return pessoa?.bio;
 }
 
-function getNameById(id: number): string | undefined {
-    const pessoa = getPessoaById(id);
-    return pessoa ? pessoa.name : undefined;
+function getNameById(id: number, lista: Pessoa[]): string | undefined {
+    const pessoa = getPessoaById(id, lista);
+    return pessoa?.name;
 }
 
-function setBioById(id: number, newBio: string): void {
-    const pessoa = getPessoaById(id);
+function setBioById(id: number, newBio: string, lista: Pessoa[]): void {
+    const pessoa = getPessoaById(id, lista);
     if(pessoa){
         pessoa.bio = newBio;
     }
 }
 
-function setNameById(id: number, newName: string): void {
-    const pessoa = getPessoaById(id);
+function setNameById(id: number, newName: string, lista: Pessoa[]): void {
+    const pessoa = getPessoaById(id, lista);
     if(pessoa){
         pessoa.name = newName;
     }
 }
 
 // Implementação deletePessoaById com o Paradigma Funcional
-function deletePessoaById(id: number): void {
+function deletePessoaById(id: number, lista: Pessoa[]): Pessoa[] {
     let novaLista = lista.filter(pessoa => pessoa.id !== id);
-    lista = novaLista;
+    return novaLista;
 }
 
 // Implementação getPessoaById com o Paradigma Funcional
-function getPessoaById(id: number): Pessoa | undefined {
+function getPessoaById(id: number, lista: Pessoa[]): Pessoa | undefined {
     const pessoa = lista.find(pessoa => pessoa.id === id);
     return pessoa ? pessoa : undefined;
 }
