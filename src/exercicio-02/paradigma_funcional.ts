@@ -19,7 +19,7 @@ let lista: Pessoa[] = [
  * 
  * @returns A biografia da pessoa ou undefined se o ID não for encontrado.
  */
-function getBioById(id: number, lista: Pessoa[]): string | undefined {
+export function getBioById(id: number, lista: Pessoa[]): string | undefined {
     const pessoa = getPessoaById(id, lista);
     return pessoa?.bio;
 }
@@ -32,7 +32,7 @@ function getBioById(id: number, lista: Pessoa[]): string | undefined {
  * 
  * @returns O nome da pessoa ou undefined se o ID não for encontrado.
  */
-function getNameById(id: number, lista: Pessoa[]): string | undefined {
+export function getNameById(id: number, lista: Pessoa[]): string | undefined {
     const pessoa = getPessoaById(id, lista);
     return pessoa?.name;
 }
@@ -44,7 +44,7 @@ function getNameById(id: number, lista: Pessoa[]): string | undefined {
  * @param newBio - A nova biografia a ser atribuída.
  * @param lista - A lista de pessoas na qual a operação será realizada.
  */
-function setBioById(id: number, newBio: string, lista: Pessoa[]): void {
+export function setBioById(id: number, newBio: string, lista: Pessoa[]): void {
     const pessoa = getPessoaById(id, lista);
     if(pessoa){
         pessoa.bio = newBio;
@@ -58,7 +58,7 @@ function setBioById(id: number, newBio: string, lista: Pessoa[]): void {
  * @param newName - O novo nome a ser atribuído.
  * @param lista - A lista de pessoas na qual a operação será realizada.
  */
-function setNameById(id: number, newName: string, lista: Pessoa[]): void {
+export function setNameById(id: number, newName: string, lista: Pessoa[]): void {
     const pessoa = getPessoaById(id, lista);
     if(pessoa){
         pessoa.name = newName;
@@ -73,7 +73,7 @@ function setNameById(id: number, newName: string, lista: Pessoa[]): void {
  * 
  * @returns Uma nova lista de pessoas após a remoção.
  */
-function deletePessoaById(id: number, lista: Pessoa[]): Pessoa[] {
+export function deletePessoaById(id: number, lista: Pessoa[]): Pessoa[] {
     let novaLista = lista.filter(pessoa => pessoa.id !== id);
     return novaLista;
 }
