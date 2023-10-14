@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 03</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="root">
+    <div class="ex01">
+        <h1>Exercicio 01 - Contagem de vogais</h1>
+        <label for="input-palavra">Palavra:</label>
+        <input type="text" id="input-palavra" name="input-palavra" placeholder="Digite a palavra..." required>
+        <button onclick="exibirResultado()">Enviar</button>
+      <p id="p-letra-b">Total de vogais: <span id="total-vogais-b">Aguardando a palavra ser enviada...</span></p>
+    </div>
+
+    <div class="ex02">
+      
+      <h1>Exercicio 02</h1>
+      <h3>Lista:</h3>
+      <div id="lista-itens"></div>
+      
+      <div class="op-container">
+      <div class="form-container">
+          <h3>Consultar pessoa:</h3>
+          <label for="input-id1">Id:</label>
+          <input type="text" id="input-id1" name="input-id1" placeholder="Digite o id..." required>
+          <button id="button-getName">Obter nome</button>
+          <button id="button-getBio">Obter bio</button>
+          <p id="p-ex02">Resultado: <span id="resultado-consulta-ex02">...</span></p>
+      </div>
+      
+      <div class="form-container">
+          <h3>Modificar pessoa:</h3>
+          <label for="input-id2">Id:</label>
+          <input type="text" id="input-id2" name="input-id2" placeholder="Digite o id..." required>
+          <label for="input-valor">Novo valor:</label>
+          <input type="text" id="input-valor" name="input-valor" placeholder="Digite o novo valor para bio ou nome..." required>
+          
+          <button id="button-setName">Modificar nome</button>
+          <button id="button-setBio">Modificar bio</button>
+      </div>
+
+      <div class="form-container">
+        <h3>Deletar pessoa:</h3>
+        <label for="input-id3">Id:</label>
+        <input type="text" id="input-id3" name="input-id3" placeholder="Digite o id..." required>
+        <button id="button-deletePerson"">Deletar pessoa</button>
+      </div>
+    </div>
+        
+    </div>
+
+  </div>
+  
+  <script src="../../dist/exercicio-01/exercicio-01.js"></script>
+  <script type="module" src="../../dist/exercicio-03/exercicio-03.js"></script>
+</body>
+</html>
+

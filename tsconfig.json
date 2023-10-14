@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "target": "ESNext",  // Define a versão do ECMAScript alvo (ES6, ES2015, ESNext, etc.)
+        "module": "ESNext",  // Define o sistema de módulos (CommonJS, ES6, None, etc.)
+        "outDir": "./dist",   // Diretório de saída para os arquivos compilados
+        "rootDir": "./src",   // Diretório de origem dos arquivos TypeScript
+        "strict": true,       // Ativa opções de verificação estrita (recomendado)
+        "esModuleInterop": true,  // Permite interoperabilidade com módulos ES6      
+        "forceConsistentCasingInFileNames": true, // Verifica maiúsculas/minúsculas em nomes de arquivos
+        "strictNullChecks": true, // Verifica nulos estritamente
+        "noImplicitAny": true,   // Proíbe tipos implícitos "any"
+        "allowSyntheticDefaultImports": true, // Permite importações padrão sintéticas
+        "removeComments": true,  // Remove comentários de saída
+        "lib": ["ESNext", "DOM"], // Lista das bibliotecas disponíveis no ambiente (ESNext e DOM no exemplo)
+        "types": ["node"],       // Tipos de declaração adicionais a serem incluídos
+},
+    "include": ["src/**/*.ts"],  // Padrão de inclusão dos arquivos TypeScript
+    "exclude": ["node_modules"]  // Padrão de exclusão dos arquivos TypeScript
+}
